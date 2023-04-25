@@ -1,0 +1,22 @@
+public class StaticKeyWord {
+	
+	static int  val=m();
+	
+	
+	static{
+		System.out.println("iam static block");
+	}
+	
+	static int m() {
+		System.out.println("I am in first");
+		return  20;
+	}
+
+	public static void main(String[] args) {
+                  
+		System.out.println("iam main");
+		
+	}
+
+}
+//Static kewy words  order vise execute
