@@ -1,0 +1,56 @@
+package DataStructure;
+
+ 
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.Queue;
+import java.util.Stack;
+
+import javax.security.auth.callback.LanguageCallback;
+
+public class ArrayLinkedLIst {
+	public static void main(String[] args) {
+		
+		int arr[]= {1,2,3,4,5,6,7,8};
+		int res = 0;
+		for (int i = 0; i < arr.length; i++) {
+			res+=arr[i];
+		}
+		System.out.println("Sum of array ="+res);
+		
+		LinkedList l=new LinkedList();
+		for (int i = 0; i < arr.length; i++) {
+			l.add(arr[i]);
+		}
+		System.out.println("Linked list data "+l);
+		
+		Stack s=new Stack();
+		//System.out.println(l.size());
+		for(int i=l.size()-1;i>=0;i--) {
+			s.push(l.get(i));
+		}
+		System.out.println("reverse List"+s);
+		
+		Queue q=new LinkedList();
+		for (int i = 0; i < arr.length;i++) {
+			if(arr[i]%2==0)
+			 q.add(arr[i]);
+		}
+		System.out.println("Queue even index "+q);
+		
+		Map<Integer,Float> m=new HashMap();
+		double  f=1.1;
+		for (int i = 0; i < arr.length; i++) {
+			  if(arr[i]%2!=0) {
+				  m.put(arr[i],(float) f);
+				  f++;
+			  }
+		}
+		System.out.println(m);
+		
+		
+	}
+
+}
